@@ -57,6 +57,19 @@
       height:250px
       margin: 10px 0;
     }
+    .submit_btn_div {
+      display: flex;
+      justify-content: center; /* center horizontally */
+      margin-top: 15px; /* optional spacing */
+    }
+    .submit_btn_div button {
+      background: #ffb703;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -100,7 +113,9 @@
     <label>Upload Payment Screenshot:</label>
     <input type="file" name="payment_screenshot" accept="image/*" required>
     <!-- <input type="text" name="payment_url" > -->
-    <button type="submit">Submit</button>
+    <div class="submit_btn_div">
+        <button type="submit">Submit</button>
+    </div>
   </form>
   
 <script>
