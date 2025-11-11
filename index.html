@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Registration Form</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -141,7 +142,9 @@
     <label>Payment:</label>
     <div class="qr">
       <p>Scan the QR code below to make your payment:</p>
-      <img src="QR.jpeg" alt="Payment QR Code"><br>
+      <a href="upi://pay?pa=kalegarirshad@ybl&pn=IRSHAD%20RAMAJAN%20KALEG&am=100&tn=Form%20Registration%20Payment&cu=INR">
+          <img src="QR.jpeg" alt="Payment QR Code"><br>
+      </a>
     </div>
     <label>Upload Payment Screenshot:</label>
     <input type="file" name="Payment_screenshot" accept="image/*" required>
