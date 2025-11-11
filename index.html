@@ -6,48 +6,65 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f4f6f8;
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* purple to blue */
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
     h2 {
       text-align: center;
-      color: #333;
+      margin-bottom: 20px;
+      color: #fff;
     }
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+
     label {
+      display: block;
+      margin: 10px 0 5px;
       font-weight: bold;
     }
-    input, textarea, select {
+
+    input, select, textarea {
       width: 100%;
       padding: 8px;
-      margin: 8px 0 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
+      border-radius: 8px;
       border: none;
-      border-radius: 5px;
+      outline: none;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #00c6ff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      width: 100%;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 16px;
     }
+
     button:hover {
-      background-color: #45a049;
+      background-color: #0072ff;
     }
-    .qr {
-      text-align: center;
-    }
-    .qr img {
-      width: 200px;
-      margin: 10px 0;
+
+    img.qr {
+      display: block;
+      margin: 10px auto;
+      width: 150px;
+      border-radius: 10px;
     }
   </style>
 </head>
