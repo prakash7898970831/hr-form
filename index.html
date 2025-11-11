@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f4f6f8;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .qr {
+      text-align: center;
+    }
+    .qr img {
+      width: 200px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form action="https://formspree.io/f/" method="POST" enctype="multipart/form-data">
+    <label>S.No:</label>
+    <input type="text" name="sno" required>
+    <label>Full Name:</label>
+    <input type="text" name="name" required>
+    <label>Mobile Number:</label>
+    <input type="tel" name="mobile" pattern="[0-9]{10}" required>
+    <label>Age:</label>
+    <input type="number" name="age" min="15" max="60" required>
+    <label>Qualification:</label>
+    <input type="text" name="qualification">
+    <label>Education Status:</label>
+    <select name="education_status" required>
+      <option value="">Select</option>
+      <option value="Continue">Continue</option>
+      <option value="Break">Break</option>
+    </select>
+    <label>Marital Status:</label>
+    <select name="marital_status" required>
+      <option value="">Select</option>
+      <option value="Unmarried">Unmarried</option>
+      <option value="Married">Married</option>
+    </select>
+    <label>Gender:</label>
+    <select name="gender" required>
+      <option value="">Select</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+    <label>Address:</label>
+    <textarea name="address" rows="3" required></textarea>
+    <label>Payment:</label>
+    <div class="qr">
+      <p>Scan the QR code below to make your payment:</p>
+      <img src="qr.png" alt="Payment QR Code"><br>
+    </div>
+    <label>Upload Payment Screenshot:</label>
+    <input type="file" name="payment_screenshot" accept="image/*" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
